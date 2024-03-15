@@ -8,10 +8,9 @@
 //     якщо вона менше або дорівнює containerSize, і false, якщо ні.
 
 function isEnoughCapacity(products, containerSize) {
-  fruitsArrayValues = Object.values(products);
   let totalFruits = 0;
-  for (const value of fruitsArrayValues) {
-    totalFruits += value;
+  for (let fruit in products) {
+    totalFruits += products[fruit];
   }
   return totalFruits <= containerSize ? true : false;
 }
